@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Juan Pablo Ibarron — 3D Artist">
+  <section class="hero">
+    <h1>Juan Pablo Ibarron</h1>
+    <p class="role">
+      3D Artist · Modeling · Rigging · Animation
+    </p>
+
+    <p class="intro">
+      Especializado en creación de personajes y modelos 3D
+      listos para animación, con enfoque en topología limpia
+      y flujos de trabajo profesionales.
+    </p>
+
+    <div class="actions">
+      <a href="/work" class="btn primary">Ver trabajo</a>
+      <a href="/about" class="btn">Sobre mí</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    max-width: 760px;
+  }
+
+  .role {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #9aa0a6;
+  }
+
+  .intro {
+    margin-top: 24px;
+    line-height: 1.6;
+    color: #cfcfcf;
+  }
+
+  .actions {
+    margin-top: 32px;
+    display: flex;
+    gap: 16px;
+  }
+
+  .btn {
+    border: 1px solid #1e1e22;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: #f3f3f3;
+    font-size: 14px;
+  }
+
+  .btn.primary {
+    border-color: #f3f3f3;
+  }
+
+  .btn:hover {
+    border-color: #ffffff;
+  }
+</style>
