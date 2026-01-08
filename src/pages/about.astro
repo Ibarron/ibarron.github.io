@@ -4,59 +4,153 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout title="About — Juan Pablo Ibarron">
 
-  <section class="about">
+  <!-- =========================
+       HEADER
+       ========================= -->
+  <section class="about-header">
     <h1>About</h1>
-
-    <p>
-      Hi, I’m Juan Pablo Ibarron, a 3D Artist specialized in character modeling,
-      rigging, and animation. I primarily work with Blender, creating
-      production-ready 3D characters with a strong balance between technical
-      accuracy and creative expression.
-    </p>
-
-    <p>
-      My work focuses on full character pipelines — from sculpting and
-      retopology to rigging and animation — with an emphasis on clean topology,
-      efficient workflows, and animation-friendly results.
-    </p>
-
-    <p>
-      Whether you’re starting from an early concept or a defined brief, I’m open
-      to collaborations involving 3D characters, animation, and visual
-      development.
+    <p class="subtitle">
+      3D Artist · Character Rigging & Animation
     </p>
   </section>
 
-  <!-- CONTACT SECTION -->
+  <!-- =========================
+       PROFESSIONAL SUMMARY
+       ========================= -->
+  <section class="block">
+    <h2>Professional Summary</h2>
+    <p>
+      3D Artist specialized in character rigging and animation, with experience
+      working across the full 3D character pipeline. I focus on building
+      animation-ready assets with clean setups, efficient deformation, and
+      production-oriented workflows.
+    </p>
+    <p>
+      My work combines technical problem-solving with a strong sense of movement
+      and structure, allowing me to contribute both complete character builds
+      and specific pipeline stages within collaborative environments.
+    </p>
+  </section>
+
+  <!-- =========================
+       CORE SKILLS
+       ========================= -->
+  <section class="block">
+    <h2>Core Skills</h2>
+    <ul class="list">
+      <li>Character Rigging (FK / IK setups, deformation)</li>
+      <li>Character Animation (blocking, polishing, cleanup)</li>
+      <li>3D Character Modeling</li>
+      <li>Retopology for Animation</li>
+      <li>Weight Painting & Skinning</li>
+      <li>Pipeline Optimization</li>
+    </ul>
+  </section>
+
+  <!-- =========================
+       TOOLS
+       ========================= -->
+  <section class="block">
+    <h2>Tools</h2>
+    <ul class="list two-col">
+      <li>Blender</li>
+      <li>Houdini</li>
+      <li>Clip studio paint</li>
+      <li>DaVinci Resolve</li>
+      <li>Procreate</li>
+    </ul>
+  </section>
+
+  <!-- =========================
+       EXPERIENCE
+       ========================= -->
+  <section class="block">
+    <h2>Experience</h2>
+
+    <div class="item">
+      <h3>3D Artist — Personal & Freelance Projects</h3>
+      <span class="meta">2023 — Present</span>
+      <p>
+        Development of character and environment projects covering modeling,
+        rigging, and animation. Work includes full character pipelines, animation
+        studies, and environment-focused 3D scenes, with emphasis on clean
+        topology, efficient rigs, and animation-ready assets.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================
+       LANGUAGES
+       ========================= -->
+  <section class="block">
+    <h2>Languages</h2>
+    <ul class="list">
+      <li>Spanish — Native</li>
+      <li>English — B2+</li>
+      <li>French — A2</li>
+    </ul>
+  </section>
+
+  <!-- =========================
+       CONTACT
+       ========================= -->
   <section class="contact">
     <span class="eyebrow">CONTACT</span>
-    <h2>Let’s talk about your next project</h2>
-
-    <p class="email">
-      Email: juanpabloibarron99@gmail.com
-    </p>
-
-    <a href="mailto:juanpabloibarron99@gmail.com" class="btn primary">
+    <h2>Let’s work together</h2>
+    <p class="email">juanpabloibarron99@gmail.com</p>
+    <a href="mailto:juanpabloibarron99@gmail.com" class="btn">
       Get in touch
     </a>
   </section>
-  <style>
-.about {
+
+</BaseLayout>
+
+<style>
+.about-header {
   max-width: 720px;
   margin: 0 auto;
-}
-
-.about h1 {
   text-align: center;
-  margin-bottom: 32px;
 }
 
-.about p {
-  margin-top: 20px;
+.subtitle {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.block {
+  max-width: 720px;
+  margin: 64px auto 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.list li {
+  margin-bottom: 6px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.item {
+  margin-top: 16px;
+}
+
+.meta {
+  font-size: 12px;
+  color: var(--muted);
 }
 
 .contact {
-  margin-top: 120px;
+  max-width: 720px;
+  margin: 120px auto 0;
+  text-align: center;
 }
 
 .eyebrow {
@@ -69,5 +163,3 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   margin: 16px 0;
 }
 </style>
-
-</BaseLayout>

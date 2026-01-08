@@ -1,0 +1,147 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Resume — Juan Pablo Ibarron">
+
+  <section class="resume">
+
+    <h1>Resume</h1>
+
+    <!-- SUMMARY -->
+    <section class="block">
+      <h2>Summary</h2>
+      <p>
+       3D Artist with hands-on experience creating complete 3D scenes and character
+       projects using Blender. I work across modeling, texturing, rigging, lighting,
+       and animation, with a strong focus on visual storytelling and clean,
+       production-ready workflows. My background in data analysis brings a structured,
+        technical, and detail-oriented approach to 3D production.
+</p>
+
+    </section>
+    <div class="item">
+  <h3>Personal & Independent Projects</h3>
+  <span class="meta">2023 — Present</span>
+    <p>
+    Development of 3D animation and environment projects inspired by Mexican
+    culture and urban life, covering the full pipeline from modeling and
+    texturing to rigging, lighting, and animation.
+    </p>
+    </div>
+    <!-- SKILLS -->
+    <section class="block">
+      <h2>Skills</h2>
+      <ul class="skills">
+       <li>3D Character Modeling</li>
+       <li>Environment Modeling</li>
+        <li>Character Rigging</li>
+        <li>3D Animation</li>
+        <li>Texturing & UV Mapping</li>
+       <li>Lighting & Rendering (Eevee / Cycles)</li>
+      </ul>
+
+    </section>
+
+    <!-- TOOLS -->
+    <section class="block">
+      <h2>Tools</h2>
+     <ul class="tools">
+      <li>Blender</li>
+      <li>Clip Studio</li>
+      <li>Illustrator</li>
+      <li>DaVinci Resolve</li>
+      <li>Toon Boom</li>
+      <li>Procreate</li>
+    </ul>
+    </section>
+
+    <!-- EXPERIENCE 
+    <section class="block">
+      <h2>Experience</h2>
+
+      <div class="item">
+        <h3>3D Artist — Freelance</h3>
+        <span class="meta">2022 — Present</span>
+        <p>
+          Development of 3D character projects covering modeling, rigging, and
+          animation for personal and collaborative works.
+        </p>
+      </div>
+    </section>-->
+
+    <!-- EDUCATION -->
+    <section class="block">
+      <h2>Education</h2>
+      <div class="item">
+        <h3>3D Animation, Texturing & Rigging</h3>
+        <span class="meta">Independent Courses & Online Training (2023 — 2025)</span>
+        <p>
+          Training focused on animation fundamentals, character rigging, texturing,
+          and visual storytelling through self-directed learning and online platforms.
+        </p>
+      </div>
+    </section>
+    <section class="block">
+      <h2>Languages</h2>
+      <ul class="skills">
+        <li>Spanish — Native</li>
+        <li>English — B2+</li>
+        <li>German — A2</li>
+      </ul>
+    </section>
+    <!-- DOWNLOAD 
+    <section class="block download">
+      <a href="/resume/JuanPabloIbarron_Resume.pdf" target="_blank" class="btn">
+        Download PDF Resume
+      </a>
+    </section>-->
+
+  </section>
+
+</BaseLayout>
+
+<style>
+.resume {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.block {
+  margin-top: 48px;
+}
+
+.block h2 {
+  margin-bottom: 16px;
+}
+
+.skills,
+.tools {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.item {
+  margin-top: 16px;
+}
+
+.meta {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.download {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.btn {
+  border: 1px solid var(--line);
+  padding: 12px 20px;
+  text-decoration: none;
+  color: var(--fg);
+}
+</style>

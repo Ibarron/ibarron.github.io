@@ -28,6 +28,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     loop
     muted
     playsinline
+    controls
+    preload="metadata"
   ></video>
 
   <p class="caption">
@@ -41,6 +43,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     loop
     muted
     playsinline
+    controls
+    preload="metadata"
   ></video>
 
   <p class="caption">
@@ -49,9 +53,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </section>
 
   <section class="gallery">
-    <img src="/work/serpent-icon/snake_1.png" alt="Serpent Icon - main render" />
-    <img src="/work/serpent-icon/snake_2.png" alt="Serpent Icon - alternate view" />
-    <img src="/work/serpent-icon/snake_3.png" alt="Serpent Icon - detail" />
+    <img src="/work/serpent-icon/snake_1.png" alt="Serpent Icon - main render" class="zoomable"/>
+    <img src="/work/serpent-icon/snake_2.png" alt="Serpent Icon - alternate view" class="zoomable" />
+    <img src="/work/serpent-icon/snake_3.png" alt="Serpent Icon - detail" class="zoomable"/>
   </section>
 
 </BaseLayout>

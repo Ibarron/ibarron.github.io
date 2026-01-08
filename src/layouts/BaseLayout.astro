@@ -100,7 +100,6 @@ const { title = "Ibarron — Portfolio" } = Astro.props;
         border-top: 1px solid var(--line);
       }
 
-
       .footer-inner{
         display:flex;
         justify-content:space-between;
@@ -142,6 +141,33 @@ const { title = "Ibarron — Portfolio" } = Astro.props;
           align-items:flex-start;
         }
       }
+
+      /* =========================
+         LIGHTBOX
+         ========================= */
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.9);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        cursor: zoom-out;
+      }
+
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+
+      .lightbox.show {
+        display: flex;
+      }
+
+      .zoomable {
+        cursor: zoom-in;
+      }
     </style>
   </head>
 
@@ -149,16 +175,15 @@ const { title = "Ibarron — Portfolio" } = Astro.props;
     <div class="layout">
       <nav>
         <div class="nav-inner">
-          <a class="brand" href="/">ibarron</a>
+          <a class="brand" href="/">Ibarron</a>
           <div class="links">
             <a href="/work">Work</a>
             <a href="/about">About</a>
-            <a href="/resume">Resume</a>
           </div>
         </div>
       </nav>
 
-      <main>
+      <main id="top">
         <slot />
       </main>
 
@@ -171,12 +196,45 @@ const { title = "Ibarron — Portfolio" } = Astro.props;
 
           <div class="footer-right">
             <a href="https://www.behance.net/juanpabloibarron" target="_blank">Behance</a>
-            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/atintamente" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@ibarron_" target="_blank">TikTok</a>
             <a href="#top">Back to top</a>
           </div>
         </div>
       </footer>
     </div>
+
+    <!-- LIGHTBOX HTML -->
+    <div id="lightbox" class="lightbox">
+      <img id="lightbox-img" alt="" />
+    </div>
+
+    <!-- LIGHTBOX SCRIPT -->
+    <script>
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+
+      if (lightbox && lightboxImg) {
+        document.addEventListener("click", (e) => {
+          // OPEN
+          if (e.target.classList.contains("zoomable")) {
+            lightboxImg.src = e.target.src;
+            lightbox.classList.add("show");
+            return;
+          }
+
+          // CLOSE (click anywhere inside lightbox)
+          if (lightbox.classList.contains("show") && lightbox.contains(e.target)) {
+            lightbox.classList.remove("show");
+          }
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            lightbox.classList.remove("show");
+          }
+        });
+      }
+    </script>
   </body>
 </html>
