@@ -1,0 +1,126 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Serpent Icon — 3D Animation">
+
+  <section class="project">
+    <h1>Serpent Icon</h1>
+
+    <p class="intro">
+      Serpent Icon is a stylized 3D animation project focused on shape design,
+      silhouette clarity, and clean motion. The project explores how simple
+      forms and controlled animation can communicate identity and character
+      through minimal visual elements.
+    </p>
+
+    <ul class="details">
+      <li><strong>Type:</strong> 3D Icon / Animation Project</li>
+      <li><strong>Focus:</strong> Design · Motion · Visual Clarity</li>
+      <li><strong>Software:</strong> Blender</li>
+      <li><strong>Year:</strong> 2025</li>
+    </ul>
+  </section>
+<section class="video">
+  <video
+    src="/work/serpent-icon/snake_viweport.mp4"
+    autoplay
+    loop
+    muted
+    playsinline
+  ></video>
+
+  <p class="caption">
+    Viewport preview showcasing modeling and motion tests.
+  </p>
+</section>
+<section class="video">
+  <video
+    src="/work/serpent-icon/totem_final.mp4"
+    autoplay
+    loop
+    muted
+    playsinline
+  ></video>
+
+  <p class="caption">
+    Final animated version of the Serpent Icon.
+  </p>
+</section>
+
+  <section class="gallery">
+    <img src="/work/serpent-icon/snake_1.png" alt="Serpent Icon - main render" />
+    <img src="/work/serpent-icon/snake_2.png" alt="Serpent Icon - alternate view" />
+    <img src="/work/serpent-icon/snake_3.png" alt="Serpent Icon - detail" />
+  </section>
+
+</BaseLayout>
+
+<style>
+  .video {
+  max-width: 960px;
+  margin: 0 auto 64px;
+}
+
+.video video {
+  width: 100%;
+  border: 1px solid var(--line);
+  display: block;
+}
+
+.caption {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.project {
+  max-width: 720px;
+  margin: 0 auto 64px;
+}
+
+.intro {
+  margin-top: 24px;
+}
+
+.details {
+  margin: 32px 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.details li {
+  margin-bottom: 6px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 64px;
+}
+
+.gallery img {
+  width: 100%;
+  border: 1px solid var(--line);
+}
+
+.compare {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

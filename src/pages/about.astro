@@ -1,9 +1,73 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="About — Juan Pablo Ibarra">
-  <h1>About Me</h1>
-  <p>Hola, soy <strong>Juan Pablo Ibarra</strong>, 3D artist especializado en modelado, rigging y animación. Trabajo principalmente con <strong>Blender</strong> para crear personajes y escenas 3D con enfoque técnico y creativo.</p>
-  <p>Explora mis proyectos para ver procesos de retopología, animación y diseño 3D.</p>
-  <p>Encuéntrame también en <a href="https://www.behance.net/juanpabloibarron" target="_blank">Behance</a>.</p>
+
+<BaseLayout title="About — Juan Pablo Ibarron">
+
+  <section class="about">
+    <h1>About</h1>
+
+    <p>
+      Hi, I’m Juan Pablo Ibarron, a 3D Artist specialized in character modeling,
+      rigging, and animation. I primarily work with Blender, creating
+      production-ready 3D characters with a strong balance between technical
+      accuracy and creative expression.
+    </p>
+
+    <p>
+      My work focuses on full character pipelines — from sculpting and
+      retopology to rigging and animation — with an emphasis on clean topology,
+      efficient workflows, and animation-friendly results.
+    </p>
+
+    <p>
+      Whether you’re starting from an early concept or a defined brief, I’m open
+      to collaborations involving 3D characters, animation, and visual
+      development.
+    </p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact">
+    <span class="eyebrow">CONTACT</span>
+    <h2>Let’s talk about your next project</h2>
+
+    <p class="email">
+      Email: juanpabloibarron99@gmail.com
+    </p>
+
+    <a href="mailto:juanpabloibarron99@gmail.com" class="btn primary">
+      Get in touch
+    </a>
+  </section>
+  <style>
+.about {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about h1 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.about p {
+  margin-top: 20px;
+}
+
+.contact {
+  margin-top: 120px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--muted);
+}
+
+.email {
+  margin: 16px 0;
+}
+</style>
+
 </BaseLayout>

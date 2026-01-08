@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Mixcoac Station — 3D Environment Study">
+
+  <section class="project">
+    <h1>Mixcoac Station</h1>
+
+    <p class="intro">
+      Mixcoac Station is a 3D environment study based on one of Mexico City’s
+      most iconic transportation hubs. This project focuses on architectural
+      structure, spatial composition, and atmosphere, translating a real-world
+      location into a stylized yet grounded 3D representation.
+    </p>
+
+    <p>
+      The goal of the project was to capture the essence of the station through
+      clean geometry, accurate proportions, and a strong sense of scale, while
+      maintaining an efficient and organized modeling workflow.
+    </p>
+
+    <ul class="details">
+      <li><strong>Type:</strong> 3D Environment / Architectural Study</li>
+      <li><strong>Focus:</strong> Modeling · Composition · Spatial Design</li>
+      <li><strong>Software:</strong> Blender</li>
+      <li><strong>Year:</strong> 2025</li>
+      <li><strong>Location:</strong> Mexico City</li>
+    </ul>
+  </section>
+  <section class="video">
+  <video
+    src="/work/station-mixcoac/viewport_mixcoac.mp4"
+    autoplay
+    loop
+    muted
+    playsinline
+  ></video>
+
+  <p class="caption">
+    Viewport preview showcasing modeling and motion tests.
+  </p>
+  <section class="video">
+  <video
+    src="/work/station-mixcoac/mixcoac_station_render.mp4"
+    autoplay
+    loop
+    muted
+    playsinline
+  ></video>
+
+  <p class="caption">
+    Final animated version of the Serpent Icon.
+  </p>
+</section>
+
+  <section class="gallery">
+    <img src="/work/station-mixcoac/mixcoac_1.png" alt="Mixcoac Station - wide view" />
+    <img src="/work/station-mixcoac/mixcoac_station_render_1.png" alt="Mixcoac Station - alternate angle" />
+    <img src="/work/station-mixcoac/mixcoac_station_render_3.png" alt="Mixcoac Station - architectural detail" />
+  </section>
+
+
+</BaseLayout>
+
+<style>
+   .video {
+  max-width: 960px;
+  margin: 0 auto 64px;
+}
+
+.video video {
+  width: 100%;
+  border: 1px solid var(--line);
+  display: block;
+}
+
+.caption {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+.project {
+  max-width: 720px;
+  margin: 0 auto 64px;
+}
+
+.intro {
+  margin-top: 24px;
+}
+
+.details {
+  margin: 32px 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.details li {
+  margin-bottom: 6px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 64px;
+}
+
+.gallery img {
+  width: 100%;
+  border: 1px solid var(--line);
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
