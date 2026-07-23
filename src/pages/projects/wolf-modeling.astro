@@ -1,0 +1,449 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const turnaround = [
+  {
+    title: "Front",
+    image: "/work/modeling/wolf/front.png",
+  },
+  {
+    title: "Side",
+    image: "/work/modeling/wolf/sideMakas.png",
+  },
+  {
+    title: "Back",
+    image: "/work/modeling/wolf/back_maki.png",
+  },
+];
+---
+
+<BaseLayout title="Maki (Dog Character) — Juan Pablo Ibarron">
+  <main class="project-page">
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Character Modeling · Retopology · Texturing</p>
+
+        <h1>Maki (Dog Character)</h1>
+
+        <p class="intro">
+          A stylized quadruped character developed through modeling, manual
+          retopology, UV unwrapping and hand-painted texturing. The final mesh
+          was designed for rigging and animation.
+        </p>
+      </div>
+
+      <figure class="hero-image">
+        <img
+          src="/work/modeling/wolf/wolf-hero.png"
+          alt="Wolf character hero render"
+        />
+      </figure>
+    </section>
+
+    <section class="overview section">
+      <div class="section-label">
+        <p>01</p>
+        <h2>Overview</h2>
+      </div>
+
+      <div class="overview-grid">
+        <p class="overview-text">
+          This project focuses on creating a stylized character with readable
+          proportions, clean topology and a production-ready workflow. The
+          character was modeled and retopologized in Blender, then textured by
+          hand in 3DCoat.
+        </p>
+
+        <dl class="project-details">
+          <div>
+            <dt>Role</dt>
+            <dd>Character Artist</dd>
+          </div>
+
+          <div>
+            <dt>Software</dt>
+            <dd>Blender · 3DCoat</dd>
+          </div>
+
+          <div>
+            <dt>Workflow</dt>
+            <dd>Modeling · Retopology · UVs · Texturing</dd>
+          </div>
+
+          <div>
+            <dt>Purpose</dt>
+            <dd>Animation-ready character</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="turnaround section">
+      <div class="section-label">
+        <p>02</p>
+        <h2>Turnaround</h2>
+      </div>
+
+      <p class="section-description">
+        Front, side and back views used to present the character proportions,
+        silhouette and texture distribution.
+      </p>
+
+      <div class="turnaround-grid">
+        {
+          turnaround.map((view) => (
+            <figure class="turnaround-card">
+              <img src={view.image} alt={`Wolf character ${view.title} view`} />
+              <figcaption>{view.title}</figcaption>
+            </figure>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="topology section">
+      <div class="section-label">
+        <p>03</p>
+        <h2>Topology</h2>
+      </div>
+
+      <p class="section-description">
+        Manual retopology designed with continuous edge flow around the eyes,
+        muzzle, shoulders and deformation areas.
+      </p>
+
+      <div class="topology-grid">
+        <figure>
+          <img
+            src="/work/modeling/wolf/Maki_retopo_UVa.png"
+            alt="Wolf character full body topology"
+          />
+          <figcaption>Full-body topology</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/work/modeling/wolf/wireframes.png"
+            alt="Wolf character face topology"
+          />
+          <figcaption>Facial edge flow</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="uv section">
+      <div class="section-label">
+        <p>04</p>
+        <h2>UV Layout</h2>
+      </div>
+
+      <div class="uv-grid">
+        <figure class="uv-image">
+          <img
+            src="/work/modeling/wolf/uv-layout.png"
+            alt="Wolf character UV layout"
+          />
+        </figure>
+
+        <div class="uv-copy">
+          <p>
+            The UVs were manually unwrapped to keep the main character surfaces
+            readable and to provide enough space for hand-painted textures.
+          </p>
+
+          <ul>
+            <li>Manual UV unwrapping</li>
+            <li>Organized UV islands</li>
+            <li>Hand-painted texture workflow</li>
+            <li>Prepared for animation production</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="next-project section">
+      <p class="eyebrow">RELATED DISCIPLINE</p>
+
+      <h2>Production-ready rig available.</h2>
+
+      <a href="/projects/wolf-rigging">
+        View rigging project
+        <span aria-hidden="true">→</span>
+      </a>
+    </section>
+
+  </main>
+</BaseLayout>
+
+<style>
+  .project-page {
+    width: min(100% - 48px, 1440px);
+    margin: 0 auto;
+    padding: 96px 0 140px;
+  }
+
+  .hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 64px;
+    padding-bottom: 100px;
+  }
+
+  .hero-copy {
+    max-width: 1000px;
+  }
+
+  .eyebrow {
+    margin: 0 0 24px;
+    color: var(--muted, #8f8f8f);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(64px, 10vw, 110px);
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+  }
+
+  .intro {
+    max-width: 760px;
+    margin: 36px 0 0;
+    color: var(--muted, #a5a5a5);
+    font-size: clamp(18px, 2vw, 26px);
+    line-height: 1.55;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  .hero-image {
+    overflow: hidden;
+    background: #111;
+  }
+
+  .hero-image img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .section {
+    padding: 100px 0;
+    border-top: 1px solid var(--line, #292929);
+  }
+
+  .section-label {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+    align-items: baseline;
+    margin-bottom: 42px;
+  }
+
+  .section-label p {
+    margin: 0;
+    color: var(--muted, #777);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+
+  .section-label h2 {
+    margin: 0;
+    font-size: clamp(40px, 5vw, 76px);
+    font-weight: 500;
+    letter-spacing: -0.045em;
+  }
+
+  .section-description {
+    max-width: 760px;
+    margin: 0 0 48px 80px;
+    color: var(--muted, #999);
+    line-height: 1.7;
+  }
+
+  .overview-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.7fr);
+    gap: 90px;
+    margin-left: 80px;
+  }
+
+  .overview-text {
+    margin: 0;
+    font-size: clamp(20px, 2vw, 30px);
+    line-height: 1.5;
+  }
+
+  .project-details {
+    margin: 0;
+  }
+
+  .project-details div {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line, #292929);
+  }
+
+  .project-details dt {
+    color: var(--muted, #777);
+    font-size: 13px;
+  }
+
+  .project-details dd {
+    margin: 0;
+  }
+
+  .turnaround-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .turnaround-card,
+  .topology-grid figure {
+    background: #111;
+    overflow: hidden;
+  }
+
+  .turnaround-card img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  figcaption {
+    padding: 16px 4px 0;
+    color: var(--muted, #888);
+    font-size: 13px;
+  }
+
+  .topology-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .topology-grid img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .uv-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+    gap: 72px;
+    align-items: center;
+  }
+
+  .uv-image {
+    background: #050505;
+  }
+
+  .uv-image img {
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+
+  .uv-copy {
+    color: var(--muted, #999);
+    line-height: 1.7;
+  }
+
+  .uv-copy p {
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  .uv-copy ul {
+    margin: 32px 0 0;
+    padding-left: 18px;
+  }
+
+  .uv-copy li + li {
+    margin-top: 10px;
+  }
+
+  .next-project h2 {
+    max-width: 900px;
+    margin: 0 0 42px;
+    font-size: clamp(42px, 6vw, 90px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.05em;
+  }
+
+  .next-project a {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 8px;
+  }
+
+  @media (max-width: 900px) {
+    .project-page {
+      width: min(100% - 30px, 1440px);
+      padding-top: 72px;
+    }
+
+    .overview-grid,
+    .uv-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+      margin-left: 0;
+    }
+
+    .section-description {
+      margin-left: 0;
+    }
+
+    .turnaround-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .topology-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .project-page {
+      width: min(100% - 24px, 1440px);
+    }
+
+    .hero {
+      min-height: auto;
+    }
+
+    .section {
+      padding: 72px 0;
+    }
+
+    .section-label {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .project-details div {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+  }
+</style>

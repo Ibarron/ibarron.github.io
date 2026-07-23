@@ -1,0 +1,218 @@
+\documentclass{article}
+
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{thmtools}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+
+\colorlet{LightGray}{White!90!Periwinkle}
+\colorlet{LightOrange}{Orange!15}
+\colorlet{LightGreen}{Green!15}
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+
+\declaretheoremstyle[name=Theorem,]{thmsty}
+\declaretheorem[style=thmsty,numberwithin=section]{theorem}
+\tcolorboxenvironment{theorem}{colback=LightGray}
+
+\declaretheoremstyle[name=Proposition,]{prosty}
+\declaretheorem[style=prosty,numberlike=theorem]{proposition}
+\tcolorboxenvironment{proposition}{colback=LightOrange}
+
+\declaretheoremstyle[name=Principle,]{prcpsty}
+\declaretheorem[style=prcpsty,numberlike=theorem]{principle}
+\tcolorboxenvironment{principle}{colback=LightGreen}
+
+\setstretch{1.2}
+\geometry{
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+}
+
+% ------------------------------------------------------------------------------
+
+\begin{document}
+
+% ------------------------------------------------------------------------------
+% Cover Page and ToC
+% ------------------------------------------------------------------------------
+
+\title{ \normalsize \textsc{}
+		\\ [2.0cm]
+		\HRule{1.5pt} \\
+		\LARGE \textbf{\uppercase{El gato virtute}
+		\HRule{2.0pt} \\ [0.6cm] \large{Ibarra García Juan Pablo} \vspace*{10\baselineskip}}
+		}
+\date{}
+\author{
+		Basada en la canción creada por \\
+		The weakerthans\\
+		'Plea from a cat named virtute'}
+
+\maketitle
+\newpage
+
+
+
+% ------------------------------------------------------------------------------
+
+\section*{Idea}
+La historia se inspira en la canción "Plea from a cat named Virtute". Desde la perspectiva del gato llamado Virtute, se relata cómo su dueño ha perdido su entusiasmo por la vida. Virtute nota que su amo ya no disfruta de las cosas como solía hacerlo, y a pesar de los intentos del gato por animarlo,  se ha vuelto retraído su amo y pasa la mayoría del tiempo en casa. Virtute se siente impotente al ver a su mejor amigo en ese estado y anhela que él recupere su alegría y vitalidad. La historia explora la relación especial entre Virtute y su dueño, mientras el gato intenta ayudar lo a encontrar su camino de regreso hacia la felicidad y la autorealización.
+
+
+% Maybe I need to add one more part: Examples.
+% Set style and colour later.
+
+\section*{Imágenes}
+\subsection*{Personajes}
+Me gustaría hacer la idea con un estilo de anime, algo no tan detallado pero que se vea bien, tampoco quiero algo tan de caricatura, hice estos bocetos, como en la fig. \ref{bocetos}
+\begin{figure}[h]
+  \begin{center}
+    \subfigure[Tipo de personas anime]{
+        \includegraphics[scale=.3]{personas}
+        \label{Imagen-Madrid}}
+    \subfigure[Boceto de gatos]{
+        \includegraphics[scale=.3]{gatos}
+        \label{Imagen-Londres}}
+    \caption{Bocetos tipo anime/realista}
+    \label{bocetos}
+  \end{center}
+\end{figure}
+
+\subsection*{Fondo}
+Para el fondo me gustaría algo sencillo, que la mayoría suceda dentro del departamento del dueño, solo que salgan las paredes con sus cuadros o arreglos, como la siguiente fig. \ref{fondo}
+
+\begin{figure}[h]
+
+\includegraphics[scale=.25]{fondo}
+\centering
+\caption{fondo de la animación simon´s cat. Referencia: https://www.youtube.com/@SimonsCat}
+\label{fondo}
+\end{figure}
+
+Algo que me gustó mucho justo de esta animación es que no hay dialogos entre uno y otro, siento que sería mejor hacerlo de esta forma, de todos modos, hice un pequeño dialogo entre ellos, pero no se cuál convenga más.
+
+\section*{Boceto guión}
+\textbf{\large Personajes:}
+
+Gato (Virtute): El protagonista felino de la historia, que simboliza el deseo de apoyar y animar a su dueño.
+
+
+Dueño (Alex): Un individuo que está pasando por un momento difícil en la vida y se muestra apático y desanimado.
+
+\textbf{\large Escena 1: La Casa - Sala de Estar}
+
+Virtute está recostado en el sofá mientras observa a Alex, quien está mirando la televisión sin mucho interés.
+
+Virtute: piensa ¿Por qué no querrás jugar nunca? (suspiro)
+
+El gato salta del sofá y se acerca a Alex.
+
+Virtute: maulla suavemente y frota su cabeza contra la pierna de Alex
+
+Alex: suspira ¿Qué quieres, Virtute?
+
+Virtute: piensa Quiero que estés bien. (mira a Alex con ojos compasivos)
+
+\textbf{\large Escena 2: Cocina}
+
+Virtute se pasea por la cocina, donde Alex está sentado en la mesa, perdido en pensamientos.
+
+Virtute: salta a la mesa y se frota contra los brazos de Alex
+
+Alex: mirando al gato ¿Tú también estás cansado de este pedazo de cuerda? (sonríe débilmente)
+
+Virtute: piensa Estoy cansado de verte triste. (mueve la cola suavemente)
+
+\textbf{\large Escena 3: Habitación de Alex}
+
+Alex está recostado en la cama, mirando el techo. Virtute se acurruca a su lado.
+
+Virtute: ronronea suavemente y se acurruca contra Alex
+
+Alex: acariciando a Virtute A veces siento que duermo tanto como tú.
+
+Virtute: cierra los ojos y ronronea más fuerte
+
+\textbf{\large Escena 4: Parque}
+
+Alex y Virtute están sentados en un banco en el parque. Alex parece un poco más animado.
+
+Alex: suspira No sé a quién le hablo. Me siento tan perdido.
+
+Virtute: se restriega contra la mano de Alex y lo mira con ternura
+
+Alex: acaricia a Virtute ¿Tú entiendes lo que digo, verdad? Aunque no seas una persona.
+
+Virtute: piensa Entiendo más de lo que crees. (maulla suavemente)
+
+\textbf{\large Escena 5: Casa - Sala de Estar}
+
+Alex está leyendo un libro en el sofá, con Virtute acurrucado a su lado.
+
+Alex: sonríe ¿Sabes, Virtute? Tus ronroneos son como pequeñas canciones que me animan.
+
+Virtute: cierra los ojos y ronronea contento
+
+Alex: acaricia a Virtute A veces me siento como esas canciones amargas que menciona la canción. Pero sé que necesito cambiar.
+
+Virtute: se frota contra Alex, transmitiendo apoyo
+
+\textbf{\large Escena 6: Cocina}
+
+Alex está preparando la cena mientras Virtute observa desde la encimera.
+
+Alex: sonríe Invité a mi hermana y a su basset hound a cenar esta noche. ¿Qué opinas?
+
+Virtute: menea la cola emocionado
+
+\textbf{\large Escena 7: Sala de Estar - Noche}
+
+La casa está llena de risas y conversaciones mientras todos juegan a juegos de salón.
+
+Virtute: observa feliz desde el rincón
+
+Alex: le hace un gesto a Virtute para que se una
+
+Virtute se une al grupo, simbolizando la integración y la conexión con los demás.
+
+\textbf{\large Escena 8: Casa - Habitación de Alex - Noche}
+
+Alex se acuesta en la cama, con Virtute acurrucado a su lado.
+
+Alex: suspira Gracias, Virtute. Gracias por estar aquí cuando más te necesitaba.
+
+Virtute: ronronea suavemente y se acurruca más cerca de Alex
+
+Alex: cierra los ojos y sonríe Eres fuerte, Virtute. Y yo también puedo serlo.
+
+La escena se desvanece con Alex y Virtute descansando, transmitiendo un mensaje de esperanza y apoyo mutuo.
+
+
+
+Fin.
+\newpage
+
+% ------------------------------------------------------------------------------
+% Reference and Cited Works
+% ------------------------------------------------------------------------------
+
+\bibliographystyle{IEEEtran}
+\bibliography{References.bib}
+
+% ------------------------------------------------------------------------------
+
+\end{document}
