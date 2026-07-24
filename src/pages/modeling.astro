@@ -7,30 +7,40 @@ const projects = [
     title: "Maki (Dog Character)",
     category: "Character Modeling · Retopology · Texturing",
     description:
-      "A stylized quadruped character developed from modeling and manual retopology to hand-painted textures and an animation-ready production mesh.",
+      "A stylized quadruped character developed from sculpting and manual retopology to hand-painted textures and an animation-ready production mesh.",
     image: "/work/modeling/wolf/wolf-hero.png",
     link: "/projects/wolf-modeling",
   },
 
   {
     number: "02",
-    title: "Mixcoac Station",
-    category: "Environment Modeling · 3D Rendering",
+    title: "Wolf Character",
+    category: "Character Modeling · Production Topology",
     description:
-      "A stylized 3D environment inspired by Mixcoac Station, focused on architectural modeling, composition and visual presentation.",
-    image: "/work/Mixcoac/mixcoac-hero.jpg",
-    link: "/projects/mixcoac-station",
+      "A production-ready wolf character created through high-poly sculpting, manual retopology and optimized topology for rigging and animation.",
+    image: "/work/Wolf_Rigging/wolf_hero.png",
+    link: "/projects/lobo-retopologia",
   },
 
   {
     number: "03",
-    title: "Serpent Icon",
-    category: "Stylized Modeling · Look Development",
+    title: "Mixcoac Station",
+    category: "Environment Modeling · Rendering",
     description:
-      "A stylized serpent icon created through a compact modeling and rendering workflow, designed as a graphic 3D asset.",
-    image: "/work/Serpent/serpent-hero.jpg",
-    link: "/projects/serpent-icon",
+      "A stylized environment inspired by Mexico City's Mixcoac Station, focused on architectural modeling, composition and cinematic rendering.",
+    video: "/work/modeling/Mixcoac/mixcoac-preview.mp4",
+    link: "/projects/mixcoac-station",
   },
+
+  {
+    number: "04",
+    title: "Christmas Project",
+    category: "Character Modeling · Scene Assembly · Lighting",
+    description:
+      "A stylized holiday scene featuring original dinosaur characters, environment assembly, lighting and final rendering created during my internship at Cloud 10 Studio.",
+    image: "/work/modeling/christmas/christmas-hero.png",
+    link: "/projects/christmas-project",
+  }
 ];
 ---
 
@@ -72,11 +82,27 @@ const projects = [
               </div>
 
               <div class="project-image">
-                <img
-                  src={project.image}
-                  alt={`${project.title} project`}
-                  loading="lazy"
-                />
+                {
+                  project.video ? (
+                    <video
+                      src={project.video}
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      preload="metadata"
+                      aria-label={`${project.title} project preview`}
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <img
+                      src={project.image}
+                      alt={`${project.title} project`}
+                      loading="lazy"
+                    />
+                  )
+                }
               </div>
 
               <div class="project-footer">
@@ -222,7 +248,8 @@ const projects = [
     background: #111;
   }
 
-  .project-image img {
+  .project-image img,
+  .project-image video {
     width: 100%;
     height: 100%;
     display: block;
@@ -230,6 +257,10 @@ const projects = [
     transition:
       transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1),
       filter 400ms ease;
+  }
+
+  .project-image video {
+    pointer-events: none;
   }
 
   .project-footer {
@@ -255,7 +286,8 @@ const projects = [
     font-size: 14px;
   }
 
-  .project-link:hover .project-image img {
+  .project-link:hover .project-image img,
+  .project-link:hover .project-image video {
     transform: scale(1.025);
     filter: brightness(1.06);
   }

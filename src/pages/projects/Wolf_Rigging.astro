@@ -1,53 +1,104 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const technicalFeatures = [
+  "IK/FK switching",
+  "Space switching",
+  "Stretch systems",
+  "Foot roll",
+  "Facial controls",
+  "Animator-friendly control layout",
+];
 ---
 
 <BaseLayout title="Wolf Character — Production-Ready Rig">
-  <section class="project">
-    <a class="back" href="/work">← Back to Work</a>
+  <article class="project-page">
 
-    <header class="hero">
-      <h1>Wolf Character — Production-Ready Rig</h1>
-      <p class="meta">Blender · Character Modeling · Rigging · Animation · 2026</p>
-
-      <p class="intro">
-        Full character project built from scratch: sculpt → retopology → Texturing → rigging → animation tests.
-        The rig includes IK/FK switching, space switching, stretch systems, foot roll, and facial controls.
-      </p>
-    </header>
-
-    <!-- TOP ROW: 2 VIDEOS -->
-    <section class="video-grid-2">
-      <div class="video-item">
-        <video
-          src="/work/Wolf_Rigging/angryface.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
-          controls
-          preload="metadata"
-        ></video>
-        <p class="caption">Facial controls and expression preview.</p>
+    <header class="project-hero">
+      <div class="hero-top">
+        <a class="back-link" href="/rigging">← Back to Rigging</a>
+        <p class="year">2026</p>
       </div>
 
-      <div class="video-item">
-        <video
-          src="/work/Wolf_Rigging/walking.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
-          controls
-          preload="metadata"
-        ></video>
-        <p class="caption">Walk cycle and full rig motion preview.</p>
+      <div class="hero-content">
+        <p class="eyebrow">FULL CHARACTER RIG · QUADRUPED RIGGING</p>
+
+        <h1>Wolf Character<br />Production-Ready Rig<span>.</span></h1>
+
+        <div class="hero-bottom">
+          <p class="intro">
+            A complete quadruped rig developed in Blender, designed for clean
+            deformation, intuitive animation controls and flexible production
+            workflows.
+          </p>
+
+          <p class="software">
+            Blender · Rigging · Animation
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="overview-section">
+      <div>
+        <p class="section-label">OVERVIEW</p>
+        <h2>Built for animation</h2>
+      </div>
+
+      <div class="overview-copy">
+        <p>
+          This project covers the complete production pipeline of a stylized
+          wolf character, from sculpting and retopology to texturing, rigging
+          and animation tests.
+        </p>
+
+        <p>
+          The rig was designed to support natural quadruped movement while
+          keeping the control system clear and practical for animation.
+        </p>
       </div>
     </section>
 
-    <!-- BOTTOM ROW: 3 VIDEOS -->
-    <section class="video-grid-3">
-      <div class="video-item">
+    <section class="details-grid">
+      <article>
+        <p class="section-label">ROLE</p>
+        <p>
+          Character Rigging<br />
+          Skinning<br />
+          Facial Rigging<br />
+          Animation Testing
+        </p>
+      </article>
+
+      <article>
+        <p class="section-label">SOFTWARE</p>
+        <p>Blender</p>
+      </article>
+
+      <article>
+        <p class="section-label">SYSTEMS</p>
+        <ul>
+          {
+            technicalFeatures.map((feature) => (
+              <li>{feature}</li>
+            ))
+          }
+        </ul>
+      </article>
+    </section>
+
+    <section class="media-section">
+      <div class="section-heading">
+        <p class="section-label">RIG OVERVIEW</p>
+        <h2>Complete control system</h2>
+
+        <p class="section-intro">
+          The main rig setup includes body, limb and facial controls organized
+          for quick access and predictable animation behavior.
+        </p>
+      </div>
+
+      <div class="featured-video">
         <video
           src="/work/Wolf_Rigging/rig-overview.mp4"
           autoplay
@@ -57,102 +108,451 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           controls
           preload="metadata"
         ></video>
-        <p class="caption">Rig overview and control system preview.</p>
-      </div>
 
-      <div class="video-item">
-        <video
-          src="/work/Wolf_Rigging/stretch_ankle.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
-          controls
-          preload="metadata"
-        ></video>
-        <p class="caption">Stretch and ankle deformation test.</p>
-      </div>
-
-      <div class="video-item">
-        <video
-          src="/work/Wolf_Rigging/IK_FK0001-0114.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
-          controls
-          preload="metadata"
-        ></video>
-        <p class="caption">IK/FK switching system demonstration.</p>
+        <p class="caption">
+          Full rig overview and control system demonstration.
+        </p>
       </div>
     </section>
-  </section>
+
+    <section class="media-section">
+      <div class="section-heading">
+        <p class="section-label">ANIMATION TESTS</p>
+        <h2>Movement and expression</h2>
+      </div>
+
+      <div class="video-grid-2">
+        <article class="video-item">
+          <video
+            src="/work/Wolf_Rigging/walking.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            controls
+            preload="metadata"
+          ></video>
+
+          <div class="video-info">
+            <p class="video-number">01</p>
+
+            <div>
+              <h3>Walk Cycle</h3>
+              <p>
+                Full-body deformation test focused on leg motion, spine
+                flexibility and weight distribution.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-item">
+          <video
+            src="/work/Wolf_Rigging/angryface.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            controls
+            preload="metadata"
+          ></video>
+
+          <div class="video-info">
+            <p class="video-number">02</p>
+
+            <div>
+              <h3>Facial Controls</h3>
+              <p>
+                Expression test demonstrating facial controls and deformation
+                around the muzzle, eyes and brows.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="media-section">
+      <div class="section-heading">
+        <p class="section-label">TECHNICAL FEATURES</p>
+        <h2>Rig behavior and flexibility</h2>
+      </div>
+
+      <div class="video-grid-2">
+        <article class="video-item">
+          <video
+            src="/work/Wolf_Rigging/IK_FK0001-0114.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            controls
+            preload="metadata"
+          ></video>
+
+          <div class="video-info">
+            <p class="video-number">03</p>
+
+            <div>
+              <h3>IK/FK Switching</h3>
+              <p>
+                Limb system allowing the animator to switch between IK and FK
+                depending on the needs of the shot.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-item">
+          <video
+            src="/work/Wolf_Rigging/stretch_ankle.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            controls
+            preload="metadata"
+          ></video>
+
+          <div class="video-info">
+            <p class="video-number">04</p>
+
+            <div>
+              <h3>Stretch and Ankle Controls</h3>
+              <p>
+                Stretch behavior and ankle deformation designed to support
+                stylized movement without breaking the silhouette.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="outcome-section">
+      <p class="section-label">OUTCOME</p>
+
+      <p class="outcome-text">
+        This project strengthened my understanding of quadruped rigging,
+        deformation systems and the creation of clear, animator-friendly
+        controls for production.
+      </p>
+    </section>
+
+    <section class="next-project">
+      <p class="section-label">NEXT RIGGING PROJECT</p>
+
+      <a href="/projects/minotaur-facial-rig">
+        <span>Minotaur Facial Rig</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </section>
+
+  </article>
 </BaseLayout>
 
 <style>
-  .project {
-    max-width: 1100px;
-    margin: 0 auto;
+  .project-page {
+    width: 100%;
+    padding: 52px 0 120px;
   }
 
-  .back {
-    display: inline-block;
-    margin-top: 12px;
-    color: var(--muted);
+  .project-hero {
+    min-height: 76vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 68px;
+    border-bottom: 1px solid var(--line, #292929);
+  }
+
+  .hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .back-link {
+    color: var(--muted, #888);
+    font-size: 14px;
     text-decoration: none;
+    transition: color 180ms ease;
   }
 
-  .back:hover {
-    color: var(--fg);
+  .back-link:hover {
+    color: var(--fg, #f3f3f3);
   }
 
-  .hero {
-    margin-top: 24px;
-    max-width: 820px;
+  .year,
+  .eyebrow,
+  .section-label {
+    margin: 0;
+    color: var(--muted, #888);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
   }
 
-  .meta {
-    margin-top: 8px;
-    color: var(--muted);
+  .hero-content {
+    margin-top: 72px;
+  }
+
+  .project-hero h1 {
+    margin: 34px 0 68px;
+    max-width: 1200px;
+    font-size: clamp(62px, 10vw, 150px);
+    font-weight: 600;
+    line-height: 0.88;
+    letter-spacing: -0.065em;
+  }
+
+  .project-hero h1 span {
+    color: var(--muted, #777);
+  }
+
+  .hero-bottom {
+    display: grid;
+    grid-template-columns: minmax(0, 720px) auto;
+    justify-content: space-between;
+    align-items: end;
+    gap: 48px;
   }
 
   .intro {
-    margin-top: 18px;
-    color: var(--muted);
+    margin: 0;
+    font-size: clamp(18px, 2vw, 26px);
+    line-height: 1.5;
+  }
+
+  .software {
+    margin: 0;
+    color: var(--muted, #888);
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .overview-section {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+    gap: 80px;
+    padding: 100px 0;
+    border-bottom: 1px solid var(--line, #292929);
+  }
+
+  .overview-section h2,
+  .section-heading h2 {
+    margin: 18px 0 0;
+    font-size: clamp(38px, 5vw, 68px);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+  }
+
+  .overview-copy {
+    display: grid;
+    gap: 24px;
+  }
+
+  .overview-copy p {
+    max-width: 720px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    padding: 60px 0;
+    border-bottom: 1px solid var(--line, #292929);
+  }
+
+  .details-grid article > p:last-child,
+  .details-grid ul {
+    margin: 18px 0 0;
+    color: var(--fg, #f3f3f3);
+    line-height: 1.8;
+  }
+
+  .details-grid ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .details-grid li {
+    margin: 0;
+  }
+
+  .media-section {
+    padding: 100px 0;
+    border-bottom: 1px solid var(--line, #292929);
+  }
+
+  .section-heading {
+    max-width: 850px;
+    margin-bottom: 46px;
+  }
+
+  .section-intro {
+    max-width: 680px;
+    margin: 24px 0 0;
+    font-size: 17px;
     line-height: 1.7;
+  }
+
+  .featured-video video,
+  .video-item video {
+    display: block;
+    width: 100%;
+    background: #111;
+    border: 1px solid var(--line, #292929);
+  }
+
+  .featured-video video {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position:center 25%;
+  }
+
+  .caption {
+    margin: 14px 0 0;
+    color: var(--muted, #888);
+    font-size: 13px;
   }
 
   .video-grid-2 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
-    margin-top: 40px;
-  }
-
-  .video-grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 24px;
   }
 
   .video-item video {
-    width: 100%;
-    display: block;
-    border: 1px solid var(--line);
-    border-radius: 6px;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
   }
 
-  .caption {
-    margin-top: 10px;
-    font-size: 13px;
-    color: var(--muted);
+  .video-info {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 18px;
+    margin-top: 18px;
   }
 
-  @media (max-width: 900px) {
-    .video-grid-2,
-    .video-grid-3 {
+  .video-number {
+    margin: 5px 0 0;
+    color: var(--muted, #777);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+
+  .video-info h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .video-info p {
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  .outcome-section {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.4fr) minmax(0, 1.6fr);
+    gap: 60px;
+    padding: 100px 0;
+    border-bottom: 1px solid var(--line, #292929);
+  }
+
+  .outcome-text {
+    max-width: 860px;
+    margin: 0;
+    color: var(--fg, #f3f3f3);
+    font-size: clamp(24px, 3.2vw, 46px);
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+  }
+
+  .next-project {
+    padding-top: 90px;
+  }
+
+  .next-project a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    margin-top: 26px;
+    padding: 34px 0;
+    color: inherit;
+    text-decoration: none;
+    border-top: 1px solid var(--line, #292929);
+    border-bottom: 1px solid var(--line, #292929);
+  }
+
+  .next-project a span:first-child {
+    font-size: clamp(34px, 6vw, 76px);
+    font-weight: 500;
+    letter-spacing: -0.045em;
+  }
+
+  .next-project a span:last-child {
+    font-size: 38px;
+    transition: transform 200ms ease;
+  }
+
+  .next-project a:hover span:last-child {
+    transform: translateX(8px);
+  }
+
+  @media (max-width: 850px) {
+    .project-hero {
+      min-height: 62vh;
+    }
+
+    .hero-bottom,
+    .overview-section,
+    .outcome-section {
       grid-template-columns: 1fr;
+    }
+
+    .details-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 650px) {
+    .project-page {
+      padding-top: 30px;
+    }
+
+    .project-hero h1 {
+      font-size: 54px;
+    }
+
+    .hero-top {
+      align-items: flex-start;
+    }
+
+    .details-grid,
+    .video-grid-2 {
+      grid-template-columns: 1fr;
+    }
+
+    .overview-section,
+    .media-section,
+    .outcome-section {
+      padding: 74px 0;
+    }
+
+    .hero-bottom {
+      gap: 24px;
+    }
+
+    .software {
+      white-space: normal;
     }
   }
 </style>
