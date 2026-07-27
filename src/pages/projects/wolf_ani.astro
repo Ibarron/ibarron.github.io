@@ -1,0 +1,619 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const videos = [
+  {
+    number: "01",
+    title: "Animation Breakdown",
+    description:
+      "A viewport preview highlighting the body mechanics, weight transfer and overall locomotion of the quadruped walk cycle.",
+    src: "/work/animation/wolf_ani/render_evee.mp4",
+  },
+  {
+    number: "02",
+    title: "Rig Preview",
+    description:
+      "Animation playback directly inside Blender, showcasing the rig controls and character deformation during the walk cycle.",
+    src: "/work/animation/wolf_ani/walking_evee.mp4",
+  },
+];
+---
+
+<BaseLayout title="Wolf Animation — Juan Pablo Ibarron">
+  <main class="project-page">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-top">
+        <p class="eyebrow">CHARACTER ANIMATION · 2026</p>
+
+        <a href="/animation" class="back-link">
+          ← Back to animation
+        </a>
+      </div>
+
+      <h1>
+        Wolf<br />
+        Animation<span>.</span>
+      </h1>
+
+      <div class="hero-info">
+        <p class="intro">
+          A complete character animation project developed entirely in Blender,
+            from modeling and rigging to the final quadruped walk cycle.
+        </p>
+
+        <div class="project-data">
+          <div>
+            <p class="label">ROLE</p>
+            <p>3D Artist and Animator</p>
+          </div>
+
+          <div>
+            <p class="label">SOFTWARE</p>
+            <p>Blender</p>
+          </div>
+
+          <div>
+            <p class="label">DISCIPLINES</p>
+            <p>Modeling, Rigging, Animation</p>
+          </div>
+
+          <div>
+            <p class="label">YEAR</p>
+            <p>2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN VIDEO -->
+    <section class="featured-video">
+      <video
+        src="/work/animation/wolf_ani/walking_wolf.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        controls
+        preload="metadata"
+        aria-label="Final wolf walk cycle animation"
+      >
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="overview">
+      <div class="section-label">
+        <p>PROJECT OVERVIEW</p>
+      </div>
+
+      <div class="overview-copy">
+        <h2>
+            From sculpt to final animation.
+        </h2>
+
+        <p>
+            This wolf was created as a complete production-ready character. I was
+            responsible for the entire pipeline, including character modeling,
+            retopology, UV preparation, rigging and the final walk-cycle animation.
+        </p>
+
+        <p>
+            The goal of the project was to develop believable quadruped locomotion,
+            focusing on weight transfer, body mechanics, spine flexibility, foot
+            placement and secondary motion.
+        </p>
+
+        <p class="texture-note">
+         Character textures were sourced from external resources. Everything else,
+        including modeling, topology, rigging and animation, was created by me.
+         </p>
+    </div>
+    </section>
+
+    <!-- RESPONSIBILITIES -->
+    <section class="responsibilities">
+      <div class="section-label">
+        <p>MY CONTRIBUTION</p>
+      </div>
+
+      <div class="responsibility-grid">
+        <article>
+          <p class="responsibility-number">01</p>
+          <h3>Character Modeling</h3>
+          <p>
+            Creation of the wolf’s anatomy, silhouette and overall
+            three-dimensional form.
+          </p>
+        </article>
+
+        <article>
+          <p class="responsibility-number">02</p>
+          <h3>Retopology</h3>
+          <p>
+            Animation-friendly topology designed to support clean deformation
+            throughout the body.
+          </p>
+        </article>
+
+        <article>
+          <p class="responsibility-number">03</p>
+          <h3>Character Rigging</h3>
+          <p>
+            Development of the control system used to pose and animate the
+            quadruped character.
+          </p>
+        </article>
+
+        <article>
+          <p class="responsibility-number">04</p>
+          <h3>Animation</h3>
+          <p>
+            Creation of the walk cycle with attention to rhythm, balance,
+            weight and natural locomotion.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- VIDEO BREAKDOWN -->
+    <section class="video-section">
+      <div class="section-heading">
+        <p class="section-label-text">PROCESS AND BREAKDOWN</p>
+        <h2>Animation studies</h2>
+      </div>
+
+      <div class="video-list">
+        {
+          videos.map((video) => (
+            <article class="video-item">
+              <div class="video-heading">
+                <p class="video-number">{video.number}</p>
+
+                <div>
+                  <h3>{video.title}</h3>
+                  <p>{video.description}</p>
+                </div>
+              </div>
+
+              <div class="video-wrapper">
+                <video
+                  src={video.src}
+                  muted
+                  loop
+                  playsinline
+                  controls
+                  preload="metadata"
+                  aria-label={video.title}
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- TECHNICAL FOCUS -->
+    <section class="technical">
+      <div class="section-label">
+        <p>ANIMATION FOCUS</p>
+      </div>
+
+      <div class="technical-content">
+        <h2>
+          Weight, coordination and continuous movement.
+        </h2>
+
+        <div class="technical-grid">
+          <div>
+            <p class="technical-number">01</p>
+            <h3>Weight Transfer</h3>
+            <p>
+              The body shifts from one supporting leg to another throughout
+              every phase of the walk.
+            </p>
+          </div>
+
+          <div>
+            <p class="technical-number">02</p>
+            <h3>Body Mechanics</h3>
+            <p>
+              The hips, shoulders and spine move together to reinforce the
+              rhythm of the quadruped locomotion.
+            </p>
+          </div>
+
+          <div>
+            <p class="technical-number">03</p>
+            <h3>Foot Contact</h3>
+            <p>
+              Each paw was animated to establish clear contact, support and
+              release from the ground.
+            </p>
+          </div>
+
+          <div>
+            <p class="technical-number">04</p>
+            <h3>Secondary Motion</h3>
+            <p>
+              Head, ears and tail movement add fluidity and prevent the
+              animation from feeling mechanical.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEXT PROJECT -->
+    <section class="next-project">
+      <p>NEXT PROJECT</p>
+
+      <a href="/projects/mixcoac-icono">
+       Mixcoac Icon animation
+        <span>→</span>
+      </a>
+    </section>
+
+  </main>
+</BaseLayout>
+
+<style>
+  .project-page {
+    width: min(100% - 48px, 1440px);
+    margin: 0 auto;
+    padding: 96px 0 140px;
+  }
+
+  .hero {
+    min-height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 72px;
+  }
+
+  .hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .eyebrow,
+  .section-label p,
+  .section-label-text,
+  .next-project > p {
+    margin: 0;
+    color: var(--muted, #888);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+  }
+
+  .back-link {
+    color: var(--muted, #999);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 200ms ease;
+  }
+
+  .back-link:hover {
+    color: inherit;
+  }
+
+  .hero h1 {
+    margin: 70px 0;
+    max-width: 1100px;
+    font-size: clamp(76px, 13vw, 190px);
+    font-weight: 600;
+    line-height: 0.83;
+    letter-spacing: -0.065em;
+  }
+
+  .hero h1 span {
+    color: var(--muted, #777);
+  }
+
+  .hero-info {
+    display: grid;
+    grid-template-columns: minmax(0, 600px) minmax(400px, 620px);
+    justify-content: space-between;
+    align-items: end;
+    gap: 80px;
+  }
+
+  .intro {
+    margin: 0;
+    color: var(--muted, #aaa);
+    font-size: clamp(20px, 2.3vw, 32px);
+    line-height: 1.45;
+  }
+
+  .project-data {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px 50px;
+  }
+
+  .project-data p {
+    margin: 0;
+  }
+
+  .project-data .label {
+    margin-bottom: 10px;
+    color: var(--muted, #777);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+  }
+
+  .featured-video {
+    width: 100%;
+    overflow: hidden;
+    background: #111;
+  }
+
+  .featured-video video {
+    display: block;
+    width: 100%;
+    max-height: 90vh;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .overview,
+  .responsibilities,
+  .technical {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 80px;
+    padding: 130px 0;
+    border-bottom: 1px solid var(--line, #292929);
+  }
+
+  .overview-copy {
+    max-width: 920px;
+  }
+
+  .overview-copy h2,
+  .technical-content > h2 {
+    margin: 0 0 46px;
+    max-width: 900px;
+    font-size: clamp(40px, 5.2vw, 78px);
+    font-weight: 500;
+    line-height: 1.03;
+    letter-spacing: -0.045em;
+  }
+
+  .overview-copy > p {
+    max-width: 760px;
+    margin: 0 0 24px;
+    color: var(--muted, #aaa);
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  .overview-copy .texture-note {
+    margin-top: 48px;
+    padding: 22px 26px;
+    border-left: 2px solid var(--line, #555);
+    color: var(--muted, #888);
+    font-size: 14px;
+  }
+
+  .responsibility-grid,
+  .technical-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 70px 60px;
+  }
+
+  .responsibility-grid article,
+  .technical-grid > div {
+    border-top: 1px solid var(--line, #333);
+    padding-top: 22px;
+  }
+
+  .responsibility-number,
+  .technical-number {
+    margin: 0 0 44px;
+    color: var(--muted, #777);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+
+  .responsibility-grid h3,
+  .technical-grid h3 {
+    margin: 0 0 16px;
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  .responsibility-grid article > p:last-child,
+  .technical-grid div > p:last-child {
+    margin: 0;
+    color: var(--muted, #999);
+    line-height: 1.65;
+  }
+
+  .video-section {
+    padding: 130px 0;
+    border-bottom: 1px solid var(--line, #292929);
+  }
+
+  .section-heading {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 80px;
+    margin-bottom: 80px;
+  }
+
+  .section-heading h2 {
+    margin: 0;
+    font-size: clamp(52px, 7vw, 110px);
+    font-weight: 500;
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+  }
+
+  .video-list {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+  }
+
+  .video-item {
+    display: grid;
+    grid-template-columns: 330px minmax(0, 1fr);
+    gap: 60px;
+    align-items: start;
+  }
+
+  .video-heading {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .video-number {
+    margin: 7px 0 0;
+    color: var(--muted, #777);
+    font-size: 12px;
+  }
+
+  .video-heading h3 {
+    margin: 0 0 16px;
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  .video-heading div > p {
+    margin: 0;
+    color: var(--muted, #999);
+    line-height: 1.65;
+  }
+
+  .video-wrapper {
+    overflow: hidden;
+    background: #111;
+  }
+
+  .video-wrapper video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .technical-content {
+    min-width: 0;
+  }
+
+  .next-project {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    padding-top: 130px;
+  }
+
+  .next-project a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: inherit;
+    font-size: clamp(44px, 7vw, 105px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.055em;
+    text-decoration: none;
+    transition: color 200ms ease;
+  }
+
+  .next-project a span {
+    font-size: 0.7em;
+    transition: transform 250ms ease;
+  }
+
+  .next-project a:hover {
+    color: var(--muted, #aaa);
+  }
+
+  .next-project a:hover span {
+    transform: translateX(12px);
+  }
+
+  @media (max-width: 1000px) {
+    .hero-info {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    .overview,
+    .responsibilities,
+    .technical,
+    .section-heading {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .video-item {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .project-page {
+      width: min(100% - 28px, 1440px);
+      padding-top: 64px;
+    }
+
+    .hero {
+      min-height: 65vh;
+      padding-bottom: 48px;
+    }
+
+    .hero-top {
+      align-items: flex-start;
+    }
+
+    .hero h1 {
+      margin: 70px 0 50px;
+      font-size: clamp(65px, 22vw, 110px);
+    }
+
+    .project-data,
+    .responsibility-grid,
+    .technical-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .overview,
+    .responsibilities,
+    .technical,
+    .video-section {
+      padding: 85px 0;
+    }
+
+    .video-list {
+      gap: 80px;
+    }
+
+    .video-heading {
+      grid-template-columns: 1fr;
+    }
+
+    .video-number {
+      margin: 0;
+    }
+
+    .next-project {
+      padding-top: 90px;
+    }
+  }
+</style>
