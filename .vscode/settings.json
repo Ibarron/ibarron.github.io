@@ -1,0 +1,17 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/c:\\Users\\juanp\\OneDrive\\Documentos\\CV\\Data Analyst\\CV_JuanPabloIbarra.aux": true,
+        "**/c:\\Users\\juanp\\OneDrive\\Documentos\\CV\\Data Analyst\\CV_JuanPabloIbarra.log": true,
+        "**/c:\\Users\\juanp\\OneDrive\\Documentos\\CV\\Data Analyst\\CV_JuanPabloIbarra.gz": true,
+        "**/c:\\Users\\juanp\\OneDrive\\Documentos\\CV\\Data Analyst\\CV_JuanPabloIbarra.out": true,
+        "**/c:\\Users\\juanp\\Downloads\\Juan_Pablo_Ibarra_CV_Updated.aux": true,
+        "**/c:\\Users\\juanp\\Downloads\\Juan_Pablo_Ibarra_CV_Updated.log": true,
+        "**/c:\\Users\\juanp\\Downloads\\Juan_Pablo_Ibarra_CV_Updated.gz": true,
+        "**/c:\\Users\\juanp\\Downloads\\Juan_Pablo_Ibarra_CV_Updated.out": true
+    }
+}
